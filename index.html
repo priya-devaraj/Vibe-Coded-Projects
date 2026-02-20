@@ -630,7 +630,7 @@ async function fetchQuote(){
   el.textContent   = '✦ Thinking… ✦';
 
   // If key not set yet, fall back immediately
-  if(!GROQ_API_KEY || GROQ_API_KEY === '39wWXvMX3lshy4c5hVAXT30uJ9u_6pdN61yz5PwpgCfpMoVRv'){
+  if(!GROQ_API_KEY || GROQ_API_KEY.length < 20){
     useFallback(el, src); return;
   }
 
